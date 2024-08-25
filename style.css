@@ -292,3 +292,7 @@ h1 {
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+.forecastContainer{
+    display: flex;
+    justify-content: center;
+}
