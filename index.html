@@ -65,42 +65,48 @@
           <img src="./Images/loading.gif" width="150" height="150" />
           <p>Loading</p>
         </div>
+<!-- Weather Info -->
+<div class="userInfoContainer subContainer">
+  <div class="name">
+    <p data-cityName></p>
+    <img data-countryFlag />
+  </div>
 
-        <!-- Weather Info -->
-        <div class="userInfoContainer subContainer">
-          <div class="name">
-            <p data-cityName></p>
-            <img data-countryFlag />
-          </div>
+  <p data-weatherDesc></p>
+  <img data-weatherIcon />
 
-          <p data-weatherDesc></p>
-          <img data-weatherIcon />
+  <!-- Temperature Display and Converter -->
+  <div class="temperature">
+    <p data-temp></p>
+    <p data-min-temp></p> <!-- New Element for Min Temp -->
+    <p data-max-temp></p> <!-- New Element for Max Temp -->
+    <button class="btn" data-temp-toggle>Convert to °F</button> <!-- Button for Conversion -->
+  </div>
 
-          <p data-temp></p>
+  <div class="parameterContainer">
+    <!-- Wind Speed -->
+    <div class="parameter">
+      <img src="Images/wind.png" alt="#" />
+      <p>windspeed</p>
+      <p class="parameterValue" data-windspeed></p>
+    </div>
 
-          <div class="parameterContainer">
-            <!-- Wind Speed -->
-            <div class="parameter">
-              <img src="Images/wind.png" alt="#" />
-              <p>windspeed</p>
-              <p class="parameterValue" data-windspeed></p>
-            </div>
+    <!-- Humidity -->
+    <div class="parameter">
+      <img src="Images/humidity.png" alt="#" />
+      <p>humidity</p>
+      <p class="parameterValue" data-humidity></p>
+    </div>
 
-            <!-- Humidity -->
-            <div class="parameter">
-              <img src="Images/humidity.png" alt="#" />
-              <p>humidity</p>
-              <p class="parameterValue" data-humidity></p>
-            </div>
+    <!-- Cloud Coverage -->
+    <div class="parameter">
+      <img src="Images/cloud.png" alt="#" />
+      <p>clouds</p>
+      <p class="parameterValue" data-clouds></p>
+    </div>
+  </div>
+</div>
 
-            <!-- Cloud Coverage -->
-            <div class="parameter">
-              <img src="Images/cloud.png" alt="#" />
-              <p>clouds</p>
-              <p class="parameterValue" data-clouds></p>
-            </div>
-          </div>
-        </div>
 
         <!-- 5-Day Forecast Container -->
         <div class="forecastContainer subContainer">

@@ -14,7 +14,10 @@ const errorText = document.querySelector('[data-errorText]');
 const errorImage = document.querySelector('[data-errorImg]');
 const searchInput = document.querySelector('[data-searchInput]');
 const grantAccessButton = document.querySelector('[data-grantAccess]');
-const forecastContainer = document.querySelector(".forecastContainer"); // 5-day forecast container
+const forecastContainer = document.querySelector(".forecastContainer"); 
+let currentUnit = "C"; // Default unit is Celsius
+
+// 5-day forecast container
 
 // Initial setup
 let currentTab = userTab;
@@ -88,6 +91,8 @@ function renderWeatherInfo(weatherInfo) {
     const description = document.querySelector('[data-weatherDesc]');
     const weatherIcon = document.querySelector('[data-weatherIcon]');
     const temp = document.querySelector('[data-temp]');
+    const minTemp = document.querySelector('[data-min-temp]');
+    const maxTemp = document.querySelector('[data-max-temp]');
     const windspeed = document.querySelector('[data-windspeed]');
     const humidity = document.querySelector('[data-humidity]');
     const clouds = document.querySelector('[data-clouds]');
@@ -96,11 +101,16 @@ function renderWeatherInfo(weatherInfo) {
     countryFlag.src = `https://flagcdn.com/144x108/${weatherInfo.sys.country.toLowerCase()}.png`;
     description.innerText = weatherInfo.weather[0].description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo.weather[0].icon}.png`;
+
     temp.innerText = `${weatherInfo.main.temp.toFixed(2)} °C`;
+    minTemp.innerText = `Min: ${weatherInfo.main.temp_min.toFixed(2)} °C`;
+    maxTemp.innerText = `Max: ${weatherInfo.main.temp_max.toFixed(2)} °C`;
+
     windspeed.innerText = `${weatherInfo.wind.speed.toFixed(2)} m/s`;
     humidity.innerText = `${weatherInfo.main.humidity.toFixed(2)} %`;
     clouds.innerText = `${weatherInfo.clouds.all.toFixed(2)} %`;
 }
+
 
 // Render 5-day forecast information on the UI
 function renderForecastInfo(forecastData) {
