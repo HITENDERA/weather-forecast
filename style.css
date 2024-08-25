@@ -6,6 +6,18 @@
     box-sizing: border-box;
     font-family: "Merriweather Sans", sans-serif;
 }
+/* style.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;   /* Allow vertical scrolling */
+    font-family: 'Merriweather Sans', sans-serif;
+}
 
 :root {
     --colorDark1: #112d4e;
